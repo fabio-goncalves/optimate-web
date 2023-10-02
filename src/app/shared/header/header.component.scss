@@ -1,0 +1,103 @@
+.vertical-divider {
+  border-top-width: 0;
+
+  height          : 45px;
+  background-color:whitesmoke;
+  width           : 2px;
+}
+
+.header-container {
+
+  display: flex;
+}
+
+.header-container .header-page-title {
+  flex           : 0 0 40%;
+  padding-left   : 16px;
+  display: flex;
+  align-items    : center;
+  justify-content: left;
+}
+
+.header-container .header-user-profile {
+  flex            : 0 0 calc(60% - 2px);
+
+  padding-right   : 16px;
+  display: flex;
+  align-items    : center;
+  justify-content: right;
+}
+// .app-header {
+//   .spacer {
+//     flex: 1 1 auto;
+//   }
+
+//   .vertical-divider {
+//     border-top-width: 0;
+//     padding-left   : 70px;
+//     height          : 45px;
+//     background-color:whitesmoke;
+//     width           : 2px;
+// }
+
+//   .mat-toolbar {
+//     background-color: whitesmoke;
+//     color: darkslategrey;
+//     padding: 0 2px;
+//     min-height: 45px;
+//     height: 45px;
+//   }
+
+//   .user {
+//     font-family: sans-serif;
+//     font-size: small;
+//   }
+
+//   .icon-button {
+//     margin: 0 2px;
+//     display: flex;
+//     justify-content: center;
+//     color: grayscale($color: #424242);
+//     border: 0;
+//   }
+
+  // .icon-button-image {
+  //   background-image: url('../../../assets/images/user.png');
+  //   background-size: contain;
+  //   width: 32px;
+  //   height: 32px;
+  //   margin: 0 5px;
+  // }
+
+//   img {
+//     width: 90px;
+//     height: 60px;
+//   }
+
+//   .mat-accordion {
+//     display: block;
+//     transform-origin: top left;
+//     transform: rotate(-90deg) translateX(-100vh); /* rotate and position it; translateX value corresponds to panel height */
+//     width: 100vh; /* this will be the height of the accordion (inversed due to rotation) */
+//   }
+
+//   .mat-expansion-panel {
+//     max-height: calc(100vw / 3); /* this will be the width of the panel (inversed due to rotation), 3 is panel amount */
+//   }
+
+//   .panel-content {
+//     background-color: lightblue;
+//     transform-origin: top left;
+//     transform: rotate(90deg); /* rotate back */
+//     margin-left: 100%; /* position it */
+//     height: 100vw; /* real height of the content */
+//     width: calc(100vw / 3 - 100px); /* real width of the content, 3 is panel amount */
+//   }
+
+//   .mat-expanded .mat-expansion-panel-header-title .material-icons{
+//     transform: rotate(180deg);
+//   }
+// }
+
+
+

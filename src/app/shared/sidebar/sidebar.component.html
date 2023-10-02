@@ -1,0 +1,29 @@
+<div class="sidebar-container">
+  <mat-toolbar class="sidebar-toolbar">
+    <button mat-icon-button (click)="snav.toggle()" aria-label="Menu Options" matTooltip="Click to expand the menu itens">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <img
+      src="assets/images/logo.png"
+      alt="Logo da aplicação">
+    <app-header></app-header>
+    <span class="spacer"></span>
+    <button mat-icon-button class="icon-button" aria-label="Show notifications"
+    matTooltip="See all notifications">
+      <mat-icon>notifications</mat-icon>
+    </button>
+    <button mat-icon-button class="icon-button-image" matTooltip="Optimate Account">
+    </button>
+    <button mat-icon-button aria-label="Sair" matTooltip="Exit optiMate">
+      <mat-icon>exit_to_app</mat-icon>
+    </button>
+  </mat-toolbar>
+  <mat-sidenav-container class="sidebar-sidenav-container">
+    <mat-sidenav #snav mode="side" fixedTopGap="56" opened="false">
+      <app-side-navbar></app-side-navbar>
+    </mat-sidenav>
+    <mat-sidenav-content class="router-container">
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>
