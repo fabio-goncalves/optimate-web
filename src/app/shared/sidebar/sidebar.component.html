@@ -1,20 +1,35 @@
 <div class="sidebar-container">
   <mat-toolbar class="sidebar-toolbar">
-    <button mat-icon-button (click)="snav.toggle()" aria-label="Menu Options" matTooltip="Click to expand the menu itens">
+    <button
+      mat-icon-button
+      (click)="snav.toggle()"
+      aria-label="Menu Options"
+      matTooltip="Click to expand the menu itens"
+    >
       <mat-icon>menu</mat-icon>
     </button>
     <img
+      routerLink="/home"
+      routerLinkActive="active"
       src="assets/images/logo.png"
-      alt="Logo da aplicação">
+      alt="Logo da aplicação"
+    />
     <app-header></app-header>
     <span class="spacer"></span>
-    <button mat-icon-button class="icon-button" aria-label="Show notifications"
-    matTooltip="See all notifications">
+    <button
+      mat-icon-button
+      class="icon-button"
+      aria-label="Show notifications"
+      matTooltip="See all notifications"
+    >
       <mat-icon>notifications</mat-icon>
     </button>
-    <button mat-icon-button class="icon-button-image" matTooltip="Optimate Account">
-    </button>
-    <button mat-icon-button aria-label="Sair" matTooltip="Exit optiMate">
+    <button
+      mat-icon-button
+      class="icon-button-image"
+      matTooltip="Optimate Account"
+    ></button>
+    <button mat-icon-button (click)="logout()" aria-label="Sair" matTooltip="Exit optiMate">
       <mat-icon>exit_to_app</mat-icon>
     </button>
   </mat-toolbar>

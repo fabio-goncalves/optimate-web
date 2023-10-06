@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { IMenu } from 'src/app/core/interface/IMenu';
-import { HttpclientService } from 'src/app/core/services/HttpClientServices';
+import { IMenu } from 'src/app/interface/IMenu';
+import { HttpclientService } from 'src/app/services/HttpClientServices';
 
 @Component({
   selector: 'app-side-navbar',
