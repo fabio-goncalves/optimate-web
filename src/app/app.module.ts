@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -11,14 +11,15 @@ import { MaterialModule } from './material.module';
 import { RouterModule } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
-
-
+import { CreateUserComponent } from './pages/user/create-user/create-user.component';
+import { AvatarModule } from './components/avatar/avatar.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+    CreateUserComponent,
   ],
   imports: [
     BrowserModule,
@@ -29,9 +30,10 @@ import { LoginComponent } from './pages/login/login.component';
     FragmentsModule,
     MaterialModule,
     RouterModule,
-
+    ReactiveFormsModule,
+    AvatarModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

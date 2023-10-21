@@ -25,11 +25,17 @@
       <mat-icon>notifications</mat-icon>
     </button>
     <button
+      style="background-image: url('{{ currentUser.avatar }}') "
       mat-icon-button
       class="icon-button-image"
       matTooltip="Optimate Account"
     ></button>
-    <button mat-icon-button (click)="logout()" aria-label="Sair" matTooltip="Exit optiMate">
+    <button
+      mat-icon-button
+      (click)="logout()"
+      aria-label="Sair"
+      matTooltip="Exit optiMate"
+    >
       <mat-icon>exit_to_app</mat-icon>
     </button>
   </mat-toolbar>

@@ -9,7 +9,7 @@
 }
 
 .sidebar-toolbar {
-  background-color: lightsteelblue;
+  background-color: whitesmoke;
   padding: 0 2px;
   min-height: 45px;
   height: 45px;
@@ -40,7 +40,7 @@ h1.sidebar-app-name {
   /* When the sidenav is not fixed, stretch the sidenav container to fill the available space. This
        causes `<mat-sidenav-content>` to act as our scrolling element for desktop layouts. */
   flex: 1;
-  background-color: whitesmoke;
+  background-color: white;
   // background-color: rgb(223, 222, 222) !important;
 }
 
@@ -63,14 +63,13 @@ h1.sidebar-app-name {
 }
 
 .icon-button-image {
-  background-image: url("../../../assets/images/user.png");
   background-size: contain;
   width: 32px;
   height: 32px;
   margin: 0 5px;
 }
 
-.active{
+.active {
   border-bottom: 5px solid white;
   color: white;
   transition: 300ms ease-in;

@@ -8,13 +8,20 @@ import { RouterModule } from '@angular/router';
 import { HttpClientJsonpModule, HttpClientModule } from '@angular/common/http';
 import { MainShellComponent } from './main-shell/main-shell.component';
 
-
-
 @NgModule({
-  declarations: [SidebarComponent, SideNavbarComponent, HeaderComponent,MainShellComponent],
+  declarations: [
+    SidebarComponent,
+    SideNavbarComponent,
+    HeaderComponent,
+    MainShellComponent,
+  ],
   exports: [SidebarComponent, SideNavbarComponent, HeaderComponent],
   imports: [
-    CommonModule,MaterialModule, RouterModule, HttpClientModule, HttpClientJsonpModule
-  ]
+    CommonModule,
+    MaterialModule,
+    RouterModule,
+    HttpClientModule,
+    HttpClientJsonpModule,
+  ],
 })
-export class FragmentsModule { }
+export class FragmentsModule {}

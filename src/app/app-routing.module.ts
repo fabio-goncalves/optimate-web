@@ -3,6 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { MainShellComponent } from './shared/main-shell/main-shell.component';
 import { LoginComponent } from './pages/login/login.component';
+import { CreateUserComponent } from './pages/user/create-user/create-user.component';
+import { ListUserComponent } from './pages/user/list-user/list-user.component';
 
 const routes: Routes = [
   {
@@ -11,19 +13,27 @@ const routes: Routes = [
     children: [
       {
         path: 'home',
-        component: HomeComponent
+        component: HomeComponent,
       },
-      { path: '', redirectTo: 'home', pathMatch: 'full' }
-      ]
+      {
+        path: 'create-user',
+        component: CreateUserComponent,
+      },
+      {
+        path: 'list-user',
+        component: ListUserComponent,
+      },
+      { path: '', redirectTo: 'home', pathMatch: 'full' },
+    ],
   },
   {
     path: 'login',
-    component: LoginComponent
+    component: LoginComponent,
   },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
