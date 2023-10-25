@@ -27,17 +27,33 @@
     <button
       style="background-image: url('{{ currentUser.avatar }}') "
       mat-icon-button
+      [matMenuTriggerFor]="menu"
       class="icon-button-image"
       matTooltip="Optimate Account"
     ></button>
-    <button
-      mat-icon-button
-      (click)="logout()"
-      aria-label="Sair"
-      matTooltip="Exit optiMate"
-    >
-      <mat-icon>exit_to_app</mat-icon>
-    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>
+        <mat-icon>person</mat-icon>
+        <span>Your Profile</span>
+      </button>
+      <button mat-menu-item disabled>
+        <mat-icon>voicemail</mat-icon>
+        <span>Check voice mail</span>
+      </button>
+      <button mat-menu-item>
+        <mat-icon>notifications_off</mat-icon>
+        <span>Disable alerts</span>
+      </button>
+      <button
+        mat-menu-item
+        (click)="logout()"
+        aria-label="Sair"
+        matTooltip="Exit optiMate"
+      >
+        <mat-icon>exit_to_app</mat-icon>
+        <span>Sign Out</span>
+      </button>
+    </mat-menu>
   </mat-toolbar>
   <mat-sidenav-container class="sidebar-sidenav-container">
     <mat-sidenav #snav mode="side" fixedTopGap="56" opened="false">

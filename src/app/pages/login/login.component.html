@@ -35,7 +35,7 @@
         <mat-label>Password</mat-label>
         <input
           matInput
-          type="password"
+          [type]="hide ? 'password' : 'text'"
           name="password"
           [(ngModel)]="form.password"
           required
@@ -43,6 +43,9 @@
           #password="ngModel"
           [ngClass]="{ 'is-invalid': f.submitted && password.errors }"
         />
+        <button class="icon-button" mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+          <mat-icon class="icon-display">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
         <mat-error
           *ngIf="password.errors && f.submitted"
           class="invalid-feedback"
