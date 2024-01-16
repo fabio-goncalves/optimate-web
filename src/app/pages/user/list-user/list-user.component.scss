@@ -1,6 +1,7 @@
 .card-container.card {
   display: flex;
-  width: 700px;
+  min-width: 70vh;
+  max-width: 180vh;
   flex-wrap: wrap;
   justify-content: center;
   align-content: space-between;
@@ -18,3 +19,23 @@
   -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
 }
+
+mat-card-content {
+  width: 100%;
+}
+
+table {
+  width: 100%;
+}
+
+.mat-mdc-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+td,
+th {
+  width: 25%;
+}
+
+

@@ -2,7 +2,7 @@ import { StorageService } from './storage.service';
 import { User } from './../interface/IUser';
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 
 @Injectable({
@@ -17,6 +17,8 @@ export class UserService {
   };
 
   private apiURL: string = environment.API_URL;
+  private usersSubject = new BehaviorSubject<User[]>([]);
+  users$ = this.usersSubject.asObservable();
 
   constructor(
     private http: HttpClient,
@@ -30,7 +32,11 @@ export class UserService {
   }
 
   createUser(user: User): Observable<User> {
-    return this.http.post<User>(`${this.apiURL}/user/save`, user, this.httpOptions);
+    return this.http.post<User>(
+      `${this.apiURL}/user/save`,
+      user,
+      this.httpOptions
+    );
   }
 
   uploadAvatar(user: User): Observable<any> {
@@ -39,5 +45,15 @@ export class UserService {
       user.avatar.avatar220,
       this.httpOptions
     );
+  }
+
+  listAll(): void {
+    this.http
+      .get<User[]>(`${this.apiURL}/user/listAll`, this.httpOptions)
+      .subscribe((users) => {
+        let usersTemp = this.usersSubject.getValue();
+        usersTemp = usersTemp.concat(users);
+        this.usersSubject.next(users);
+      });
   }
 }

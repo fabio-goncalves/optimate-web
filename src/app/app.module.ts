@@ -13,6 +13,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { CreateUserComponent } from './pages/user/create-user/create-user.component';
 import { AvatarModule } from './components/avatar/avatar.module';
+import { ListUserComponent } from './pages/user/list-user/list-user.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { AvatarModule } from './components/avatar/avatar.module';
     HomeComponent,
     LoginComponent,
     CreateUserComponent,
+    ListUserComponent,
   ],
   imports: [
     BrowserModule,
@@ -31,7 +33,7 @@ import { AvatarModule } from './components/avatar/avatar.module';
     MaterialModule,
     RouterModule,
     ReactiveFormsModule,
-    AvatarModule
+    AvatarModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

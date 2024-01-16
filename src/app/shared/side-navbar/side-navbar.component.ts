@@ -14,7 +14,7 @@ export class SideNavbarComponent implements OnInit {
   constructor(private httpService: HttpclientService) { }
 
   ngOnInit() {
-    this.menuList = this.httpService.getList<IMenu>("/assets/menu.json")
+    this.menuList = this.httpService.getList<IMenu>("assets/menu.json")
   }
 
 }

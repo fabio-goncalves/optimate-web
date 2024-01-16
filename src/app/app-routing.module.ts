@@ -5,11 +5,13 @@ import { MainShellComponent } from './shared/main-shell/main-shell.component';
 import { LoginComponent } from './pages/login/login.component';
 import { CreateUserComponent } from './pages/user/create-user/create-user.component';
 import { ListUserComponent } from './pages/user/list-user/list-user.component';
+import { AuthGuard } from './helpers/auth.guard';
 
 const routes: Routes = [
   {
     path: '',
     component: MainShellComponent,
+    canActivate: [AuthGuard],
     children: [
       {
         path: 'home',
